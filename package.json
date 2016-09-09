@@ -9,7 +9,6 @@
     "build": "npm run babel; node build",
     "create-index": "echo 'module.exports = require(\"./lib\").default;' > index.js",
     "docs": "rm -rf docs && mkdir docs && jsdoc -c jsdoc.json",
-    "prebuild": "npm run docs",
     "precommit": "npm test",
     "prepublish": "npm run create-index; npm run build",
     "prepush": "npm test",
