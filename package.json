@@ -13,7 +13,7 @@
     "prepublish": "npm run create-index; npm run build",
     "prepush": "npm test",
     "prerelease": "npm test",
-    "pretest": "standard src",
+    "pretest": "npm run build; standard src",
     "release": "standard-version --no-verify"
   },
   "keywords": [],

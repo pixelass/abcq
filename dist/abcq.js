@@ -105,14 +105,6 @@ var abcQ = function () {
      * @private
      */
     this.counter = this.options.counter;
-    /**
-     * Object to store already generated combinations.
-     * If a this object contains a requested value it will be returned
-     * instead of canverting it again
-     * @type {Object}
-     * @private
-     */
-    this.storage = {};
   }
 
   /**
@@ -144,8 +136,6 @@ var abcQ = function () {
      *
      * This method does not affect any other method. This method can be called multiple times before
      * calling `generate`
-     * Only converts a number when requested the first time. If the number
-     * has been converted before it will be taken from the storage.
      *
      * @param  {Number} i A number greater than `-1`. Given a list of `"ab"
      *                  the following will  be returned
@@ -174,8 +164,7 @@ var abcQ = function () {
     value: function charsAt(i) {
       /*
        * check if the number is smaller than 0.
-       * Then return `null` or check if the number has been generated before.
-       * Then return the number from the storage or continue
+       * Then return `null` or continue
        */
       if (i < 0) {
         return null;
@@ -205,16 +194,9 @@ var abcQ = function () {
        * }
        */
       var previousSlots = nextSlot ? this.charsAt(nextSlot - 1) : '';
-      /* add the current slot */
+      /* convert the current slot */
       var currentSlot = this.chars[i % this.chars.length];
-      var combination = previousSlots + currentSlot;
-
-      /*
-       * Save the value for faster usage when needed again.
-       * Then return the combination
-       */
-      this.storage[i] = combination;
-      return combination;
+      return previousSlots + currentSlot;
     }
   }]);
 
