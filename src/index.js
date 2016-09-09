@@ -72,7 +72,7 @@ class abcQ {
      * @type {Object}
      * @private
      */
-    this.stotage = {}
+    this.storage = {}
   }
 
   /**
@@ -167,7 +167,7 @@ class abcQ {
      * Save the value for faster usage when needed again.
      * Then return the combination
      */
-    this.stotage[i] = combination
+    this.storage[i] = combination
     return combination
   }
 }

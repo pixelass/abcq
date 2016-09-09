@@ -5,11 +5,9 @@ const babelify = require('babelify')
 const errorify = require('errorify')
 const uglifyify = require('uglifyify')
 const exec = require('child_process').exec
-const pkg = require('./package.json')
 
 const log = new Log('info')
 
-const version = pkg.version
 
 const fileMap = {
   'dist.js': 'abcq'
@@ -41,8 +39,8 @@ exec(`rm -rf ${buildFolder}`, (err) => {
     }, 'uglifyify')
 
     function bundle() {
-      b.bundle().pipe(fs.createWriteStream(`${outFile}-${version}.js`))
-      u.bundle().pipe(fs.createWriteStream(`${outFile}-${version}.min.js`))
+      b.bundle().pipe(fs.createWriteStream(`${outFile}.js`))
+      u.bundle().pipe(fs.createWriteStream(`${outFile}.min.js`))
     }
 
     b.on('log',  message => log.info(message))
