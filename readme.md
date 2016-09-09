@@ -18,7 +18,7 @@ Generates character combinations from numbers: `a b c ... aa ab ac ... foo fop f
 
 
 * Convert numbers to character combinations.
-* Count by character cobination
+* Count by character combination
 * Create unique ids
 * Create simple hashes
 
