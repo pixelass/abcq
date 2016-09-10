@@ -11,7 +11,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "create-index": "echo '/* global exports */\nexports = require(\"./lib\").default;' > index.js",
     "docs": "rm -rf docs && mkdir docs && jsdoc -c jsdoc.json",
-    "lint": "eslint src",
+    "lint": "eslint src build.js",
     "precommit": "npm test",
     "prepublish": "npm run create-index; npm run build",
     "prepush": "npm test",
