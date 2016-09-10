@@ -5,17 +5,18 @@ Generates character combinations from numbers: `a b c ... aa ab ac ... foo fop f
 [Documentation](https://pixelass.github.io/abcq/)
 
 [![npm](https://img.shields.io/npm/v/abcq.svg)](https://www.npmjs.com/package/abcq)
-[![GitHub license](https://img.shields.io/github/license/pixelass/abcq.svg)](https://github.com/pixelass/abcq/blob/master/LICENSE)
-[![Travis](https://img.shields.io/travis/pixelass/abcq.svg)](https://travis-ci.org/pixelass/abcq)
 [![Coveralls branch](https://img.shields.io/coveralls/pixelass/abcq.svg)](https://coveralls.io/github/pixelass/abcq)
+[![Bithound Code](https://img.shields.io/bithound/code/github/pixelass/abcq.svg](https://www.bithound.io/github/pixelass/abcq)
+[![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)  
+[![Travis](https://img.shields.io/travis/pixelass/abcq.svg)](https://travis-ci.org/pixelass/abcq)
 [![David](https://img.shields.io/david/pixelass/abcq.svg)](https://david-dm.org/pixelass/abcq)
-[![David](https://img.shields.io/david/dev/pixelass/abcq.svg)](https://david-dm.org/pixelass/abcq#info=devDependencies&view=table)
+[![David](https://img.shields.io/david/dev/pixelass/abcq.svg)](https://david-dm.org/pixelass/abcq#info=devDependencies&view=table)  
+[![GitHub license](https://img.shields.io/github/license/pixelass/abcq.svg)](https://github.com/pixelass/abcq/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/pixelass/abcq.svg)](https://github.com/pixelass/abcq/issues)
 [![GitHub forks](https://img.shields.io/github/forks/pixelass/abcq.svg)](https://github.com/pixelass/abcq/network)
-[![GitHub stars](https://img.shields.io/github/stars/pixelass/abcq.svg)](https://github.com/pixelass/abcq/stargazers)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![GitHub stars](https://img.shields.io/github/stars/pixelass/abcq.svg)](https://github.com/pixelass/abcq/stargazers)  
 
 
 * Convert numbers to character combinations.
