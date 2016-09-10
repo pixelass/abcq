@@ -7,6 +7,7 @@ Generates character combinations from numbers: `a b c ... aa ab ac ... foo fop f
 [![npm](https://img.shields.io/npm/v/abcq.svg)](https://www.npmjs.com/package/abcq)
 [![GitHub license](https://img.shields.io/github/license/pixelass/abcq.svg)](https://github.com/pixelass/abcq/blob/master/LICENSE)
 [![Travis](https://img.shields.io/travis/pixelass/abcq.svg)](https://travis-ci.org/pixelass/abcq)
+[![Coveralls branch](https://img.shields.io/coveralls/pixelass/abcq.svg)](https://coveralls.io/github/pixelass/abcq)
 [![David](https://img.shields.io/david/pixelass/abcq.svg)](https://david-dm.org/pixelass/abcq)
 [![David](https://img.shields.io/david/dev/pixelass/abcq.svg)](https://david-dm.org/pixelass/abcq#info=devDependencies&view=table)
 [![GitHub issues](https://img.shields.io/github/issues/pixelass/abcq.svg)](https://github.com/pixelass/abcq/issues)
@@ -18,7 +19,7 @@ Generates character combinations from numbers: `a b c ... aa ab ac ... foo fop f
 
 
 * Convert numbers to character combinations.
-* Count by character cobination
+* Count by character combination
 * Create unique ids
 * Create simple hashes
 
@@ -35,8 +36,10 @@ shortid.generate()
 // -> a
 shortid.generate()
 // -> b
-shortid.charsAt(1234567890)
+shortid.encode(1234567890)
 // -> clRjXk
+shortid.decode('clRjXk')
+// -> 1234567890
 ```
 
 ## When unicorns make love
@@ -52,7 +55,7 @@ const unicornLove = new abcQ({
 
 unicornLove.generate()
 // -> 🦄💖💖🦄💖
-unicornLove.charsAt(8)
+unicornLove.encode(8)
 // -> 🦄💖🦄
 ```
 
@@ -106,10 +109,18 @@ abc.generate()
 // -> b
 ```
 
-### `charsAt`
+### `encode`
 
 ```js
 const abc = new abcQ()
-abc.charsAt(1234567890)
+abc.encode(1234567890)
 // -> clRjXk
+```
+
+### `decode`
+
+```js
+const abc = new abcQ()
+abc.decode('clRjXk')
+// -> 1234567890
 ```

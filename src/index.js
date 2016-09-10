@@ -1,7 +1,7 @@
 /**
  * @file index.js
  * @module abcQ
- * @overview Number to character combination coverter
+ * @overview Number / character combination encoder / decoder
  *
  * @author Gregor Adams <greg@pixelass.com>
  * @licence The MIT License (MIT) - See file 'LICENSE' in this project.
@@ -11,6 +11,7 @@
  * all lowercase and uppercase letters of the alphabet.
  * Does not include special characters, numbers, puctuation or similar
  * @type {String}
+ * @private
  */
 const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
@@ -85,14 +86,14 @@ class abcQ {
    * // -> a b aa ab ba bb aaa aab aba abb
    */
   generate () {
-    return this.charsAt(++this.counter)
+    return this.encode(++this.counter)
   }
 
   /**
-   * Method to cenvert a number into a combination of characters
+   * Method to encode a number into a combination of characters
    *
-   * This method does not affect any other method. This method can be called multiple times before
-   * calling `generate`
+   * This method does not affect any other method.
+   * This method can be called multiple times before calling `generate`
    *
    * @param  {Number} i A number greater than `-1`. Given a list of `"ab"
    *                  the following will  be returned
@@ -102,22 +103,18 @@ class abcQ {
    *                  - 3 -> "ab"
    *                  - ...
    * @return {String} Returns the character combination of the number
-    * @example
+   * @example
    * const shortid = new abcQ({
    *   chars: 'ab'
    * })
-   * console.log(shortid.charAt(0))
+   * console.log(shortid.encode(0))
    * // -> "a"
-   * console.log(shortid.charAt(9))
+   * console.log(shortid.encode(9))
    * // -> "abb"
-   * console.log(shortid.generate())
-   * // -> "a"
-   * console.log(shortid.generate())
-   * // -> "b"
    */
-  charsAt (i) {
+  encode (i) {
     /*
-     * check if the number is smaller than 0.
+     * Check if the number is smaller than 0.
      * Then return `null` or continue
      */
     if (i < 0) {
@@ -129,28 +126,63 @@ class abcQ {
      * If a slot is `0` it will not be counted. Instead the value is used as a flag
      * This means the fist slot has a `0`-based index while the next slots are `1`-based
      * ### Example
-     * - 'ab': 1; `slots = [1,0]  -> "b"`
-     * - 'ab': 2; `slots = [2,1]   -> "aa"`
-     * - 'ab': 9; `slots = [9,5,3] -> "abb"`
+     * - 'ab': 1; `slots = [1, 0]    -> "b"`
+     * - 'ab': 2; `slots = [2, 1]    -> "aa"`
+     * - 'ab': 9; `slots = [9 ,5, 2] -> "abb"`
      */
     const nextSlot = ~~(i / this.chars.length)
 
-    /*
-     * Combine all previous slots.
-     * @todo refactor to `do` when jsdoc supports it
-     * @example
-     * const previousSlots = do {
-     *   if (nextSlot > 0) {
-     *     this.charsAt(nextSlot)
-     *   } else {
-     *     ''
-     *   }
-     * }
-     */
-    const previousSlots = nextSlot ? this.charsAt(nextSlot - 1) : ''
-    /* convert the current slot */
+    /* Combine and return all slots. */
+    const previousSlots = nextSlot ? this.encode(nextSlot - 1) : ''
     const currentSlot = this.chars[i % this.chars.length]
     return previousSlots + currentSlot
+  }
+
+  /**
+   * Method to decode a combination of characters into a number
+   *
+   * This method does not affect any other method.
+   * This method can be called multiple times before calling `generate`
+   *
+   * @param  {String} str Character combination to decode. Must contain only valid
+   *                      characters, Given a list of `"ab"
+   *                      the following will be returned
+   *                      - "a"  -> 0
+   *                      - "b"  -> 1
+   *                      - "aa" -> 2
+   *                      - "ab" -> 3
+   *                      - ...
+   * @return {Number} Returns the index of the input string
+   * @example
+   * const shortid = new abcQ({
+   *   chars: 'ab'
+   * })
+   * console.log(shortid.decode('a'))
+   * // -> o
+   * console.log(shortid.decode('abb'))
+   * // -> 9
+   */
+  decode (str) {
+    /*
+     * Check if the string contains invalid characters.
+     * Then return `null` or continue
+     */
+    if (str.replace(new RegExp(`[${this.chars}]`, 'g'), '') !== '') {
+      return null
+    }
+
+    /* Build the index for the given string */
+    let i = 0
+    let counter = str.length
+    /* For every slot add the result.
+     * Adds all slots to return a `1`-based index
+     */
+    while (counter--) {
+      const pow = Math.pow(this.chars.length, str.length - 1 - counter)
+      i += (this.chars.indexOf(str[counter]) + 1) * pow
+    }
+    /* Subtract `1` to switch back to a `0`-based index */
+    return i - 1
   }
 }
 

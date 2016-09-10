@@ -21,7 +21,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav class="main-nav">
-    <header class="nav-header"><h2><a href="index.html">Home</a></h2></header><header class="nav-header"><h3><span>Classes</span></h3></header><ul><li><a href="abcQ.html">abcQ</a><ul class='members'><li class='nav-type-header'>Members</li><li data-type='member'><a href="abcQ.html#chars">chars</a></li><li data-type='member'><a href="abcQ.html#counter">counter</a></li><li data-type='member'><a href="abcQ.html#options">options</a></li></ul><ul class='methods'><li class='nav-type-header'>Methods</li><li data-type='method'><a href="abcQ.html#charsAt">charsAt</a></li><li data-type='method'><a href="abcQ.html#generate">generate</a></li></ul></li></ul><header class="nav-header"><h3>Global</h3></header><ul><li><a href="global.html#alphabet">alphabet</a></li></ul>
+    <header class="nav-header"><h2><a href="index.html">Home</a></h2></header><header class="nav-header"><h3><span>Classes</span></h3></header><ul><li><a href="abcQ.html">abcQ</a><ul class='methods'><li class='nav-type-header'>Methods</li><li data-type='method'><a href="abcQ.html#decode">decode</a></li><li data-type='method'><a href="abcQ.html#encode">encode</a></li><li data-type='method'><a href="abcQ.html#generate">generate</a></li></ul></li></ul>
 </nav>
 
 <main id="main" class="main-content">
@@ -55,7 +55,7 @@
 <section class="code-source">
   <div class="link-box">
     
-    <a href="index.js.html">index.js</a> <a href="index.js.html#line35">line 35</a>
+    <a href="index.js.html">index.js</a> <a href="index.js.html#line36">line 36</a>
     
   </div>
 </section>
@@ -349,291 +349,31 @@
 
     
     
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<article class="card"  id="chars">
-
-
-<section class="code-source">
-  <div class="link-box">
-    
-    <a href="index.js.html">index.js</a> <a href="index.js.html#line61">line 61</a>
-    
-  </div>
-</section>
-
-
-  <h2>chars</h2>
-
-<h4 class="name"><span class="type-signature">(private) </span>chars<span class="type-signature"> :String|Array</span></h4>
-
-
-
-
-
-<div class="description">
-    <p>The list of characters to combine. It can be an <code>Array</code> or a <code>String</code>.
-If the list contains special characters, emojis or similar it should be
-an <code>Array</code>.</p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="__tag param-type param-type-string"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">String</a>
-
-</span>
-|
-
-<span class="__tag param-type param-type-array"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/array" target="_blank">Array</a>
-
-</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-</article>
-        
-            
-<article class="card"  id="counter">
-
-
-<section class="code-source">
-  <div class="link-box">
-    
-    <a href="index.js.html">index.js</a> <a href="index.js.html#line67">line 67</a>
-    
-  </div>
-</section>
-
-
-  <h2>counter</h2>
-
-<h4 class="name"><span class="type-signature">(private) </span>counter<span class="type-signature"> :Number</span></h4>
-
-
-
-
-
-<div class="description">
-    <p>initial value for the counter. Cannot be lower than <code>-1</code></p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="__tag param-type param-type-number"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">Number</a>
-
-</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-</article>
-        
-            
-<article class="card"  id="options">
-
-
-<section class="code-source">
-  <div class="link-box">
-    
-    <a href="index.js.html">index.js</a> <a href="index.js.html#line53">line 53</a>
-    
-  </div>
-</section>
-
-
-  <h2>options</h2>
-
-<h4 class="name"><span class="type-signature">(private) </span>options<span class="type-signature"> :Object</span></h4>
-
-
-
-
-
-<div class="description">
-    <p>The defaults extended by the options.</p>
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="__tag param-type param-type-object"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank">Object</a>
-
-</span>
-
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-</article>
-        
-    
 
     
         <h3 class="subsection-title">Methods</h3>
 
         
             
-<article class="card card__function" id="charsAt">
+<article class="card card__function" id="decode">
 
 
 <section class="code-source">
   <div class="link-box">
     
-    <a href="index.js.html">index.js</a> <a href="index.js.html#line118">line 118</a>
+    <a href="index.js.html">index.js</a> <a href="index.js.html#line165">line 165</a>
     
   </div>
 </section>
 
 
     
-      <h2 >charsAt</h2>
+      <h2 >decode</h2>
     
     
         
 
-        <h4 class="name"><span class="type-signature"></span>charsAt<span class="signature">(i)</span><span class="type-signature"> &rarr; {String}</span></h4>
+        <h4 class="name"><span class="type-signature"></span>decode<span class="signature">(str)</span><span class="type-signature"> &rarr; {Number}</span></h4>
     
 
     
@@ -641,9 +381,203 @@ an <code>Array</code>.</p>
 
     
     <div class="description">
-        <p>Method to cenvert a number into a combination of characters</p>
-<p>This method does not affect any other method. This method can be called multiple times before
-calling <code>generate</code></p>
+        <p>Method to decode a combination of characters into a number</p>
+<p>This method does not affect any other method.
+This method can be called multiple times before calling <code>generate</code></p>
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+        <h5>Parameters:</h5>
+        
+<div class="table-scroll">
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="__tag param-type param-type-string"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">String</a>
+
+</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Character combination to decode. Must contain only valid
+                     characters, Given a list of `&quot;ab&quot;
+                     the following will be returned</p>
+<pre class="prettyprint source"><code>                 - &quot;a&quot;  -> 0
+                 - &quot;b&quot;  -> 1
+                 - &quot;aa&quot; -> 2
+                 - &quot;ab&quot; -> 3
+                 - ...</code></pre></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</div>
+
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Returns the index of the input string</p>
+</div>
+
+
+
+<dl class="details">
+    <dt>
+        Type
+    </dt>
+    <dd>
+      <!--%= data.type.names ?-->
+      
+<span class="__tag param-type param-type-number"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">Number</a>
+
+</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint linenums"><code>const shortid = new abcQ({
+  chars: 'ab'
+})
+console.log(shortid.decode('a'))
+// -> o
+console.log(shortid.decode('abb'))
+// -> 9</code></pre>
+
+
+    
+    </article>
+
+        
+            
+<article class="card card__function" id="encode">
+
+
+<section class="code-source">
+  <div class="link-box">
+    
+    <a href="index.js.html">index.js</a> <a href="index.js.html#line115">line 115</a>
+    
+  </div>
+</section>
+
+
+    
+      <h2 >encode</h2>
+    
+    
+        
+
+        <h4 class="name"><span class="type-signature"></span>encode<span class="signature">(i)</span><span class="type-signature"> &rarr; {String}</span></h4>
+    
+
+    
+
+
+    
+    <div class="description">
+        <p>Method to encode a number into a combination of characters</p>
+<p>This method does not affect any other method.
+This method can be called multiple times before calling <code>generate</code></p>
     </div>
     
 
@@ -797,14 +731,10 @@ calling <code>generate</code></p>
     <pre class="prettyprint linenums"><code>const shortid = new abcQ({
   chars: 'ab'
 })
-console.log(shortid.charAt(0))
+console.log(shortid.encode(0))
 // -> "a"
-console.log(shortid.charAt(9))
-// -> "abb"
-console.log(shortid.generate())
-// -> "a"
-console.log(shortid.generate())
-// -> "b"</code></pre>
+console.log(shortid.encode(9))
+// -> "abb"</code></pre>
 
 
     
@@ -818,7 +748,7 @@ console.log(shortid.generate())
 <section class="code-source">
   <div class="link-box">
     
-    <a href="index.js.html">index.js</a> <a href="index.js.html#line87">line 87</a>
+    <a href="index.js.html">index.js</a> <a href="index.js.html#line88">line 88</a>
     
   </div>
 </section>
@@ -962,7 +892,7 @@ do {
 
 
 <footer class="main-footer">
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.1</a> on Fri Sep 09 2016 17:09:05 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.1</a> on Sat Sep 10 2016 01:08:43 GMT+0200 (CEST)
 </footer>
 
 <script>prettyPrint();</script>
