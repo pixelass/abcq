@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/pixelass/abcq/compare/v0.1.7...v0.2.0) (2016-09-10)
+
+
+### Features
+
+* **method:** allow decoding ([b271fa3](https://github.com/pixelass/abcq/commit/b271fa3))
+
+
+
 <a name="0.1.7"></a>
 ## [0.1.7](https://github.com/pixelass/abcq/compare/v0.1.6...v0.1.7) (2016-09-09)
 
