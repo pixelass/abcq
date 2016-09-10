@@ -6,7 +6,7 @@ Generates character combinations from numbers: `a b c ... aa ab ac ... foo fop f
 
 [![npm](https://img.shields.io/npm/v/abcq.svg)](https://www.npmjs.com/package/abcq)
 [![Coveralls branch](https://img.shields.io/coveralls/pixelass/abcq.svg)](https://coveralls.io/github/pixelass/abcq)
-[![Bithound Code](https://img.shields.io/bithound/code/github/pixelass/abcq.svg](https://www.bithound.io/github/pixelass/abcq)
+[![Bithound Code](https://img.shields.io/bithound/code/github/pixelass/abcq.svg)](https://www.bithound.io/github/pixelass/abcq)
 [![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg)](https://github.com/conventional-changelog/standard-version)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)  
