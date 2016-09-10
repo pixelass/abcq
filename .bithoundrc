@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    "**/node_modules/**",
+    "**/docs/**",
+    "**/dist/**"
+  ],
+  "test": [
+    "**/spec/**",
+  ],
+  "critics": {
+    "lint": {"engine": "standard"},
+    "wc": { "limit": 5000 }
+  }
+}
