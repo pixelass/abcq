@@ -6,10 +6,10 @@
   "main": "index.js",
   "scripts": {
     "babel": "babel src --out-dir lib",
-    "prebuild": "NODE_ENV=production",
+    "prebuild": "NODE_ENV=production; npm run create-index",
     "build": "npm run babel; node build",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "create-index": "echo '/* global exports */\nexports = require(\"./lib\").default;' > index.js",
+    "create-index": "echo '/* global exports */\nmodule.exports = require(\"./lib\").default;' > index.js",
     "docs": "rm -rf docs && mkdir docs && jsdoc -c jsdoc.json",
     "lint": "eslint src build.js",
     "precommit": "npm test",
