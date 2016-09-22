@@ -40,7 +40,7 @@
     "eslint-plugin-standard": "^2.0.0",
     "hopsdoc": "^0.1.7",
     "husky": "^0.11.8",
-    "istanbul": "^1.1.0-alpha.1",
+    "istanbul": "git://github.com/pixelass/istanbul.git#v1",
     "jsdoc": "^3.4.1",
     "log": "^1.4.0",
     "mocha": "^3.0.2",
