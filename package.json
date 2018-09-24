@@ -1,6 +1,6 @@
 {
   "name": "abcq",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "repository": "git@bitbucket.com:pixelass/abcq.git",
   "main": "lib/src/index.js",
