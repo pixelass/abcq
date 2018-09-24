@@ -2,8 +2,6 @@
 
 Generates character combinations from numbers: `a b c ... aa ab ac ... foo fop foq`
 
-[Documentation](https://pixelass.github.io/abcq/)
-
 [![npm](https://img.shields.io/npm/v/abcq.svg)](https://www.npmjs.com/package/abcq)
 
 -   Convert numbers to character combinations.
@@ -90,7 +88,7 @@ abc.encode(1234567890);
 
 ```js
 import Abcq from "abcq";
-const abc = new AbcQ();********
+const abc = new AbcQ();
 abc.decode("clRjXk");
 // -> 1234567890
 ```
